@@ -1,0 +1,288 @@
+<div class="page-content">
+  <div class="row">
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
+    <div class="col-md-4 col-lg-6 col-xl-9 mt-4">
+      <p class="product-title">Shop by Health Concerns</p>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4 view-all">View All</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
+    <div id="dataInfo">
+      <div id="shopCarousel" class="carousel slide"
+       data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div
+                class="col-md-4 col-lg-6 col-xl-3"
+                *ngFor="let item of healthConcern">
+                <div class="card">              
+                  <div class="card-body">
+                    <img
+                    class="shop"
+                    src="{{ item.img }}"
+                    alt="Card image cap"
+                  />
+                  <span class="shop-label">{{item.category}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+          <div class="carousel-item">
+            <div class="row">
+              <div
+                class="col-md-4 col-lg-6 col-xl-3"
+                *ngFor="let item of healthConcern">
+                <div class="card">              
+                  <div class="card-body">
+                    <img
+                    class="shop"
+                    src="{{ item.img }}"
+                    alt="Card image cap"
+                  />
+                  <span class="shop-label">{{item.category}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4">
+      <a class="carousel-control-next" href="#shopCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
+    <div class="col-md-4 col-lg-6 col-xl-10 mt-4">
+      <hr class="line" />
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
+    <div class="col-md-4 col-lg-6 col-xl-2 mt-4">
+      <p class="product-title">Popular Categories</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-lg-6 col-xl-1"></div>
+    <div
+      class="col-md-4 col-lg-6 col-xl-2"
+      *ngFor="let item of PopularCatList1"
+    >
+      <div class="card card-list">
+        <div class="card-body">
+          <img src="{{ item.img }}" />
+          <p class="text-label">{{ item.category }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-1"></div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-4 col-lg-6 col-xl-1"></div>
+    <div
+      class="col-md-4 col-lg-6 col-xl-2"
+      *ngFor="let item of PopularCatList2"
+    >
+      <div class="card card-list">
+        <div class="card-body">
+          <img src="{{ item.img }}" />
+          <p class="text-label">{{ item.category }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-1"></div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
+    <div class="col-md-4 col-lg-6 col-xl-10 mt-4 offer-list">
+      <div class="col-md-4 col-lg-6 col-xl-8 mt-4">
+        <i class="fa fa-dumpster-fire text-white"></i>
+
+      </div>
+      <div class="col-md-4 col-lg-6 col-xl-1 mt-4 text-white"></div>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
+    <div class="col-md-4 col-lg-6 col-xl-10 mt-4 product-title">
+      Personal Care
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-4 col-lg-6 col-xl-1"></div>
+    <div class="col-md-4 col-lg-6 col-xl-2" *ngFor="let item of PersonalCare">
+      <div class="card card-list">
+        <div class="card-body">
+          <img src="{{ item.img }}" />
+          <p class="text-label">{{ item.category }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-1"></div>
+  </div>
+  <br /><br />
+  <div class="row explore-list">
+    <div class="col-md-4 col-lg-6 col-xl-1 shop-category"></div>
+    <div class="col-md-4 col-lg-6 col-xl-2">
+      <p class="explore-label mt-4 title text-white">Explore Beauty</p>
+      <div class="card card-list">
+        <div class="card-body">
+          <img src="{{ ExploreList[0].img }}" />
+          <p class="text-label mt-3">{{ ExploreList[0].category }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-2 mt-3">
+      <br /><br />
+      <div class="card card-list">
+        <div class="card-body">
+          <img src="{{ ExploreList[1].img }}" />
+          <p class="text-label mt-3">{{ ExploreList[1].category }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-2 mt-3">
+      <br /><br />
+      <div class="card card-list">
+        <div class="card-body">
+          <img src="{{ ExploreList[2].img }}" />
+          <p class="text-label mt-3">{{ ExploreList[1].category }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-2 mt-3">
+      <br /><br />
+      <div class="card card-list">
+        <div class="card-body">
+          <img src="{{ ExploreList[3].img }}" />
+          <p class="text-label mt-3">{{ ExploreList[1].category }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-2 mt-3">
+      <br /><br />
+      <div class="card card-list">
+        <div class="card-body">
+          <img src="{{ ExploreList[4].img }}" />
+          <p class="text-label mt-3">{{ ExploreList[1].category }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+</div>
+<br />
+<div class="shop-category">
+  <div class="row">
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
+    <div class="col-md-4 col-lg-6 col-xl-9 mt-4">
+      <p class="product-title">Shop by Health Concerns</p>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4 view-all">View All</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
+
+    <div id="dataInfo">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div
+                class="col-md-4 col-lg-6 col-xl-3"
+                *ngFor="let item of shopCategory"
+              >
+                <div class="card">
+                  <img
+                    class="card-img-top img-fluid"
+                    src="{{ item.img }}"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <p class="article-label">{{ item.category }}</p>
+                    <p class="text-label">{{ item.des }}</p>
+                    <p class="article-date">{{ item.date }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div
+                class="col-md-4 col-lg-6 col-xl-3"
+                *ngFor="let item of shopCategory"
+              >
+                <div class="card">
+                  <img
+                    class="card-img-top img-fluid"
+                    src="{{ item.img }}"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <p class="article-label">{{ item.category }}</p>
+                    <p class="text-label">{{ item.des }}</p>
+                    <p class="article-date">{{ item.date }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="row join-category">
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
+    <br />
+    <div class="col-md-4 col-lg-6 col-xl-3 mt-4">
+      <p class="mt-4 join-label">Join the <br />HealthGiggles family</p>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-4 mt-4">
+      <p class="mt-4">
+        Lorem ipsum dolor sit amet, consetetur <br />sadipscing elitr, sed diam
+        nonumy
+      </p>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-3 mt-4">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+          id="Subscribe-text"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text" id="SubscribeId">Subscribe</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
+  </div>
+</div>
