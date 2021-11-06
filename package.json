@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
     "angular-font-awesome": "^3.1.2",
+    "crypto-js": "^4.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "woocommerce-api": "^1.5.0",

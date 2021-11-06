@@ -6,21 +6,24 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import {ProductService } from './services/product.service';
+import { HeaderComponent } from './pages/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    LandingComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ {
-    provide: HTTP_INTERCEPTORS,
-    useClass: ProductService,
-    multi: true
-  }],
+  providers:[ProductService],
+  // providers: [ {
+  //   provide: HTTP_INTERCEPTORS,
+  //   useClass: ProductService,
+  //   multi: true
+  // }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

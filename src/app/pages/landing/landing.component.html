@@ -9,56 +9,60 @@
   <div class="row">
     <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
     <div id="dataInfo">
-      <div id="shopCarousel" class="carousel slide"
-       data-ride="carousel">
+      <div id="shopCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row">
               <div
                 class="col-md-4 col-lg-6 col-xl-3"
-                *ngFor="let item of healthConcern">
-                <div class="card">              
+                *ngFor="let item of healthConcern"
+              >
+                <div class="card">
                   <div class="card-body">
                     <img
-                    class="shop"
-                    src="{{ item.img }}"
-                    alt="Card image cap"
-                  />
-                  <span class="shop-label">{{item.category}}</span>
+                      class="shop"
+                      src="{{ item.img }}"
+                      alt="Card image cap"
+                    />
+                    <span class="shop-label">{{ item.category }}</span>
                   </div>
                 </div>
               </div>
             </div>
-          </div>  
+          </div>
           <div class="carousel-item">
             <div class="row">
               <div
                 class="col-md-4 col-lg-6 col-xl-3"
-                *ngFor="let item of healthConcern">
-                <div class="card">              
+                *ngFor="let item of healthConcern"
+              >
+                <div class="card">
                   <div class="card-body">
                     <img
-                    class="shop"
-                    src="{{ item.img }}"
-                    alt="Card image cap"
-                  />
-                  <span class="shop-label">{{item.category}}</span>
+                      class="shop"
+                      src="{{ item.img }}"
+                      alt="Card image cap"
+                    />
+                    <span class="shop-label">{{ item.category }}</span>
                   </div>
                 </div>
               </div>
             </div>
-          </div>    
+          </div>
         </div>
       </div>
     </div>
     <div class="col-md-4 col-lg-6 col-xl-1 mt-4">
-      <a class="carousel-control-next" href="#shopCarousel" role="button" data-slide="next">
+      <a
+        class="carousel-control-next"
+        href="#shopCarousel"
+        role="button"
+        data-slide="next"
+      >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-
     </div>
-
   </div>
   <div class="row">
     <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
@@ -110,7 +114,23 @@
     <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
     <div class="col-md-4 col-lg-6 col-xl-10 mt-4 offer-list">
       <div class="col-md-4 col-lg-6 col-xl-8 mt-4">
-        <i class="fa fa-dumpster-fire text-white"></i>
+        <!-- <i class="fa fa-dumpster-fire text-white"></i> -->
+        <div class="d-flex flex-row-reverse">
+          <div class="p-1">
+            <h4 class="offer-logo">50 % OFF</h4>
+            <p class="offer-items">On All Items</p>
+          </div>
+
+          <div class="col-md-2 col-lg-6 col-xl-6 mt-4">
+            <button type="button" 
+            class="btn btn-md outline-btn btn-lg">
+            <i class="fa fa-align-justify"></i></button>
+          </div>
+
+        </div>
+        <div class="shop-more"> <button type="button" 
+          class="btn btn-md outline-btn">
+          Shop More</button></div>
 
       </div>
       <div class="col-md-4 col-lg-6 col-xl-1 mt-4 text-white"></div>
@@ -119,9 +139,11 @@
   <br />
   <div class="row">
     <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
-    <div class="col-md-4 col-lg-6 col-xl-10 mt-4 product-title">
+    <div class="col-md-4 col-lg-6 col-xl-9 mt-4 product-title">
       Personal Care
     </div>
+    <div class="col-md-4 col-lg-6 col-xl-1 mt-4 view-all">View All</div>
+
   </div>
   <br />
   <div class="row">
@@ -184,6 +206,8 @@
         </div>
       </div>
     </div>
+    <div class="col-md-4 col-lg-6 col-xl-1 shop-category"></div>
+
   </div>
   <br />
   <br />
@@ -192,8 +216,8 @@
 <div class="shop-category">
   <div class="row">
     <div class="col-md-4 col-lg-6 col-xl-1 mt-4"></div>
-    <div class="col-md-4 col-lg-6 col-xl-9 mt-4">
-      <p class="product-title">Shop by Health Concerns</p>
+    <div class="col-md-4 col-lg-6 col-xl-10 mt-4">
+      <p class="product-title">Health Advice Articles</p>
     </div>
     <div class="col-md-4 col-lg-6 col-xl-1 mt-4 view-all">View All</div>
   </div>

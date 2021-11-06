@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 // import { WoocommerceProductsService } from 'ngx-wooapi';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { ProductService } from '../../services/product.service';
-
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -144,8 +144,14 @@ export class LandingComponent implements OnInit {
       img: '../../../assets/images/Homeopathy.png',
     },
   ];
+  productSlug: string;
+
   constructor(
-    public productService: ProductService) {}
+    public productService: ProductService,
+    private router: Router, private route: ActivatedRoute) {
+      this.route.params.subscribe( params => this.productSlug = params.slug )
+
+    }
 
   ngOnInit(): void {
     
@@ -153,5 +159,7 @@ export class LandingComponent implements OnInit {
     this.productService.getAllProduct().subscribe((response) => {
       console.log("Hello..", response);
     })
+
+    
   }
 }
